@@ -1,14 +1,31 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# BTSerial
 
-# Getting Started
+This is a new [**React Native**](https://reactnative.dev) project, specifically designed for managing Bluetooth Low Energy (BLE) devices and reading serial data. The project is bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Dependencies
 
-## Step 1: Start the Metro Server
+This project relies on the following libraries:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- [**react-native-ble-manager**](https://github.com/innoveit/react-native-ble-manager): A React Native library for interacting with BLE (Bluetooth Low Energy) devices.
+- [**gluestack-ui**](https://github.com/gluestack/gluestack-ui): A UI component library for React Native.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Make sure to install these dependencies before running the application.
+
+```bash
+# using npm
+npm install react-native-ble-manager @gluestack/gluestack-ui
+
+# OR using Yarn
+yarn add react-native-ble-manager @gluestack/gluestack-ui
+```
+
+## Getting Started
+
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till the "Creating a new application" step, before proceeding.
+
+### Step 1: Start the Metro Server
+
+Start **Metro**, the JavaScript _bundler_ that ships _with_ React Native. Run the following command from the _root_ of your React Native project:
 
 ```bash
 # using npm
@@ -18,11 +35,11 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+### Step 2: Start your Application
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
+#### For Android
 
 ```bash
 # using npm
@@ -32,7 +49,7 @@ npm run android
 yarn android
 ```
 
-### For iOS
+#### For iOS
 
 ```bash
 # using npm
@@ -42,38 +59,36 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If set up _correctly_, your app should run in your _Android Emulator_ or _iOS Simulator_.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Step 3: Modifying your App
 
-## Step 3: Modifying your App
+Now that your app is running, let's modify it:
 
-Now that you have successfully run the app, let's modify it.
+1. Open `App.tsx` in your text editor and make edits.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> on Windows/Linux or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> on macOS) to see your changes.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see changes.
 
 ## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
+You've successfully run and modified your BTSerial app. :partying_face:
 
-### Now what?
+### Next Steps
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- If you want to integrate this React Native code into an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- For more on React Native, explore the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-# Troubleshooting
+## Troubleshooting
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+If you encounter issues, refer to the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+## Learn More
 
-To learn more about React Native, take a look at the following resources:
+Explore more about React Native with these resources:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- [React Native Website](https://reactnative.dev) - Learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - Overview of React Native and setting up your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - Guided tour of React Native basics.
+- [Blog](https://reactnative.dev/blog) - Read the latest official React Native blog posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - Open-source GitHub repository for React Native.
