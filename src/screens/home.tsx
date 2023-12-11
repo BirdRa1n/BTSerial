@@ -13,6 +13,8 @@ import {
   LinkText,
   useColorMode,
   Text,
+  Button,
+  ButtonText,
 } from '@gluestack-ui/themed';
 import {useEffect, useState, useRef} from 'react';
 import {SafeAreaView} from 'react-native';
@@ -174,6 +176,7 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
           }
           return map;
         });
+        onOpen();
 
         await sleep(100);
 
@@ -243,7 +246,6 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
                         filteredString,
                       ]);
                       setConnecting(false);
-                      onOpen();
 
                       setLastValueSerial(filteredString);
                     },
@@ -302,7 +304,7 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
         'BleManagerDiscoverPeripheral',
         handleDiscoverPeripheral,
       ),
-      bleManagerEmitter.addListener('BleManagerStopScan', handleStopScan),
+      bleManagerEmitter.addListener('BleManagerStopScan', handleStopScan), //gt aqui
       bleManagerEmitter.addListener(
         'BleManagerDisconnectPeripheral',
         handleDisconnectedPeripheral,
@@ -400,7 +402,7 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
 
   return (
     <GestureHandlerRootView>
-      <Box w={'100%'} h={'100%'} bg="white" sx={{_dark: {bg: 'black'}}} p={5}>
+      <Box w={'100%'} h={'100%'} bg="white" sx={{_dark: {bg: 'black'}}} p={10}>
         <SafeAreaView>
           <HStack justifyContent="space-between">
             <Heading fontSize={'$2xl'}>Search Devices</Heading>
@@ -424,6 +426,7 @@ const Home: React.FC<HomeProps> = ({navigation}) => {
             ) : (
               <>
                 <Text marginBottom={15}>Devices Detected</Text>
+
                 <FlatList
                   showsHorizontalScrollIndicator={false}
                   showsVerticalScrollIndicator={false}

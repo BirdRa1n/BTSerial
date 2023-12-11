@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import {Box, Center} from '@gluestack-ui/themed';
 import LottieView from 'lottie-react-native';
 import {useRef, useEffect} from 'react';
@@ -12,8 +13,8 @@ const Splash: React.FC<SplashProps> = ({navigation}) => {
   useEffect(() => {
     animationRef.current?.play();
     setTimeout(() => {
-      animationRef.current?.pause();
-    }, 1100);
+      animationRef.current?.reset();
+    }, 1600);
   }, []);
 
   return (
